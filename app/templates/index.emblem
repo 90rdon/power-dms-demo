@@ -36,10 +36,10 @@
         /             p.descrption-cell
         /               description
         .item-content
-          .img-container.left
+          .image-container.left
 
             a{action 'addItemToCart' this} href='#'
-              figure.image-container.effeckt-caption.effeckt-caption-10
+              figure.effeckt-caption.effeckt-caption-10
                 img src=fullImageUri alt=title
                 
                 figcaption
@@ -60,6 +60,6 @@
               div
                 author
               div
-                type
+                capitalizeFirst type
               .descrption-cell
                 description

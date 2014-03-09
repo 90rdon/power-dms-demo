@@ -1,8 +1,4 @@
 indexController = Ember.ArrayController.extend
-  # needs: [
-  #   'members'
-  # ]
-
   search:         null
   currentContent: null
 
@@ -13,8 +9,9 @@ indexController = Ember.ArrayController.extend
 
   searching: (->
     self = @
-    Ember.run.later null, ->
+    Ember.run.later ->
       self.get('filtered')
+    , 500
   ).observes('search')
 
   filteredContent: (->
@@ -27,7 +24,6 @@ indexController = Ember.ArrayController.extend
   ).property('search', 'content')
 
   filtered: (->
-    console.log 'filtered'
     result = Em.ArrayProxy.createWithMixins Em.SortableMixin,
       content:@get('filteredContent')
       sortProperties: @get('sortProperties')
