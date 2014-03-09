@@ -1,0 +1,11 @@
+.topcoat-grid__row
+  .topcoat-grid__column--auto
+    .member-wrapper
+      .category
+        fullName
+      a href='/'
+        img.medium src=images.0.path alt=fullName
+      .tagline
+        tagline
+      .bio
+        bio

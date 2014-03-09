@@ -1,0 +1,37 @@
+#content-container.topcoat-list
+  ul#product-list.topcoat-list__container
+    each controller
+      li.item-container.topcoat-list__item
+        .item-content.topcoat-grid__row
+          .topcoat-grid__column--auto
+
+            a{action 'addItemToCart' this} href='#'
+              figure.image-container.effeckt-caption.effeckt-caption-10
+                img src=fullImageUri alt=title
+                
+                figcaption
+                  .effeckt-figcaption-wrap
+                    img src=fullImageUri alt=title style='display:none;'
+                    h3
+                      =title
+                    p Add to Cart
+
+          .detail-content.topcoat-grid__column--auto
+            .top-container.topcoat-grid__row
+              .topcoat-grid__column--auto
+                =title
+              .topcoat-grid__column--auto
+                | $ {{toFixed price 2}}
+
+            .bottom-container.topcoat-grid__row
+              .topcoat-grid__column--auto
+                .topcoat-grid__row
+                  .topcoat-grid__column--auto
+                    author
+                .topcoat-grid__row
+                  .topcoat-grid__column--auto
+                    type
+                .topcoat-grid__row
+                  .topcoat-grid__column--auto
+                    p.descrption-cell
+                      description

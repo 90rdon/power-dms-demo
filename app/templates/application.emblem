@@ -1,0 +1,28 @@
+view 'effeckt-container'
+  view 'effeckt-off-screen-nav'
+    nav#effeckt-off-screen-nav.effeckt-off-screen-nav.topcoat-list__container style='display:block;'
+      h4.topcoat-list__header
+        | Navigation
+        a#effeckt-off-screen-nav-close.effeckt-off-screen-nav-close href='#' x
+
+      ul.topcoat-list
+        each controllers.cart
+          li.topcoat-list__item
+            a href='#'
+              =title
+
+    .off-screen-nav-cover
+
+    #page-wrap.page-wrap
+      .topcoat-navigation-bar.effeckt
+        .topcoat-navigation-bar__item.left.half
+          .nav-wrap-top
+            h1.topcoat-navigation-bar__title.left Store
+          .nav-wrap-bottom
+            input.topcoat-search-input type='search' value='' placeholder='search'
+
+        .topcoat-navigation-bar__item.right.half
+            a#off-screen-nav-button.topcoat-icon-button-quiet.off-screen-nav-button data-effeckt='effeckt-off-screen-nav-right-squeeze'
+              span.icomatic cart
+
+      outlet

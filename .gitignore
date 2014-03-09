@@ -1,0 +1,70 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/vendor/*
+!/vendor/loader.js
+
+# misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+.DS_Store
+Thumbs.db
+/coverage/*
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+
+# Sublime text files
+*.sublime-project
+*.sublime-workspace
+
+# linguis test files
+*.tmp_cookie
+
+*.xpressive_config
+
+# cordova
+/cordova/www/
+/cordova/platforms/
+
+# OS X
+.DS_Store
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+profile
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+
+# CocoaPods
+Pods
