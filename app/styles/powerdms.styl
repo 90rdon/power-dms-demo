@@ -393,6 +393,18 @@ h1 span:nth-of-type(11) {
   color: red;
 }
 
+.effeckt-off-screen-nav-remove {
+  right: .5rem;
+  font-size: 150%;
+  position: relative;
+  margin:auto;
+}
+
+.effeckt-off-screen-nav-remove:hover,
+.effeckt-off-screen-nav-remove:focus {
+  color: red;
+}
+
 .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
   background: -webkit-linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9));
   background: -o-linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9));
@@ -540,8 +552,17 @@ ul {
   column-break-inside:avoid;
 }
 
+.item-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .item-content {
   height:100%;
+}
+
+.img-container {
+  flex: 1 1 0;
 }
 
 .image-container img {
@@ -551,14 +572,15 @@ ul {
 
 .detail-content {
   height:400px;
+  display:flex;
 }
 
 .top-container {
-  // align-self: flex-start;
+  align-self: flex-start;
 }
 
 .bottom-container {
-  // align-self: flex-end;
+  align-self: flex-end;
 }
 
 .descrption-cell {

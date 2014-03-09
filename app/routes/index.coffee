@@ -8,10 +8,17 @@ indexRoute = Ember.Route.extend
     #   datatype: 'jsonp'
     #   success: (response) ->
     #     console.log 'response = ' + response
+
+  setupControllers: (controller, model) ->
+    controller.set 'model', model
   
   actions:
     addItemToCart: (item) ->
       cart = @controllerFor('cart')
       cart.addItemToCart(item)
+
+    removeItemFromCart: (item) ->
+      cart = @controllerFor('cart')
+      cart.removeItemFromCart(item)
 
 `export default indexRoute`

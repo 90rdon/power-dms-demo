@@ -1,48 +1,38 @@
-indexController = Ember.ArrayController.extend()
+indexController = Ember.ArrayController.extend
   # needs: [
   #   'members'
   # ]
 
-  # search:         null
-  # currentContent: null
+  search:         null
+  currentContent: null
 
-  # membersIsLoaded: (->
-  #   console.log 'controller:index - membersIsLoaded'
-  #   @set('currentContent', @get('controllers.members'))
-  # ).observes('controllers.members.content.isLoaded')
+  productsIsLoaded: (->
+    console.log 'controller:index - productIsLoaded'
+    @set('currentContent', @get('content'))
+  ).observes('content.isLoaded')
 
-  # searching: (->
-  #   console.log 'searching - ' + @get('search')
-  #   @get('filtered')
-  # ).observes('search')
+  searching: (->
+    self = @
+    Ember.run.later null, ->
+      self.get('filtered')
+  ).observes('search')
 
-  # sorted: (->
-  #   console.log 'sorted'
-  #   result = Em.ArrayProxy.createWithMixins Em.SortableMixin,
-  #     content:@get('filteredContent')
-  #     sortProperties: @get('sortProperties')
-  #     sortAscending: @get('sortAscending')
-  #   @set('currentContent', result)
-  # ).observes('arrangedContent', 'sortAscending')
+  filteredContent: (->
+    regexp = new RegExp(@get('search'), 'i')
+    result = @get('content').filter (item) ->
+      hasMatch = item.get('constructor.attributes.keys.list').filter (prop) ->
+        regexp.test item.get(prop)
 
-  # changed: (->
-  #   @get('filtered')
-  # ).observes('content.@each')
+      if hasMatch.length > 0 then true else false
+  ).property('search', 'content')
 
-  # filteredContent: (->
-  #   console.log 'filteredContent'
-  #   regexp = new RegExp(@get('search'))
-  #   result = @get('controllers.members').filter (item) ->
-  #     regexp.test item.get('first')
-  # ).property('search', 'controllers.members.@each.first')
-
-  # filtered: (->
-  #   console.log 'filtered'
-  #   result = Em.ArrayProxy.createWithMixins Em.SortableMixin,
-  #     content:@get('filteredContent')
-  #     sortProperties: @get('sortProperties')
-  #     sortAscending: @get('sortAscending')
-  #   @set('currentContent', result)
-  # ).property('filteredContent')
+  filtered: (->
+    console.log 'filtered'
+    result = Em.ArrayProxy.createWithMixins Em.SortableMixin,
+      content:@get('filteredContent')
+      sortProperties: @get('sortProperties')
+      sortAscending: @get('sortAscending')
+    @set('currentContent', result)
+  ).property('filteredContent')
 
 `export default indexController`

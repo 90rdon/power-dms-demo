@@ -13,4 +13,7 @@ cartController = Ember.ArrayController.extend
   addItemToCart: (item) ->
     @pushObject(item)
 
+  removeItemFromCart: (item) ->
+    @removeObject(item)
+
 `export default cartController`

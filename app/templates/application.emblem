@@ -8,8 +8,13 @@ view 'effeckt-container'
       ul.topcoat-list
         each controllers.cart
           li.topcoat-list__item
-            a href='#'
-              =title
+            .topcoat-grid__row
+              .topcoat-grid__column--auto.left
+                a href='#'
+                  =title
+              .topcoat-grid__column--auto.right
+                a.effeckt-off-screen-nav-remove{action 'removeItemFromCart' this} href='#' x
+
 
     .off-screen-nav-cover
 
@@ -19,7 +24,7 @@ view 'effeckt-container'
           .nav-wrap-top
             h1.topcoat-navigation-bar__title.left Store
           .nav-wrap-bottom
-            input.topcoat-search-input type='search' value='' placeholder='search'
+            view Em.TextField class='topcoat-search-input' type='search' valueBinding='controllers.index.search' placeholder='search'
 
         .topcoat-navigation-bar__item.right.half
             a#off-screen-nav-button.topcoat-icon-button-quiet.off-screen-nav-button data-effeckt='effeckt-off-screen-nav-right-squeeze'
