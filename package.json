@@ -1,5 +1,5 @@
 {
-  "name": "power-dms",
+  "name": "power-dms-demo",
   "namespace": "appkit",
   "APIMethod": "proxy",
   "proxyURL": "http://homework.powerdms.com",

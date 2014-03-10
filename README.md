@@ -1,3 +1,3 @@
 # Power DMS Demo
 
-This is web project build for Power DMS.
+This is web project build for Power DMS as a demo.
