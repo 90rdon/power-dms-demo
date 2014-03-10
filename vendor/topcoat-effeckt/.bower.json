@@ -1,0 +1,13 @@
+{
+  "name": "topcoat-effeckt",
+  "homepage": "https://github.com/topcoat/topcoat-effeckt",
+  "_release": "12bfa7288d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "gh-pages",
+    "commit": "12bfa7288db82c523d7ebf00305d390c86b8ff43"
+  },
+  "_source": "git://github.com/topcoat/topcoat-effeckt.git",
+  "_target": "gh-pages",
+  "_originalSource": "git://github.com/topcoat/topcoat-effeckt.git"
+}

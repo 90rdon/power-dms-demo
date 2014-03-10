@@ -1,0 +1,13 @@
+{
+  "name": "icomatic",
+  "homepage": "https://github.com/icomatic/sample-set",
+  "_release": "5b31272c60",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5b31272c606df254d7817726560c798ec8c26006"
+  },
+  "_source": "git://github.com/icomatic/sample-set.git",
+  "_target": "master",
+  "_originalSource": "git://github.com/icomatic/sample-set.git"
+}
