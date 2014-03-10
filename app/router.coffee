@@ -1,8 +1,7 @@
 Router = Ember.Router.extend()
 
 Router.map ->
-  @route 'component-test'
-  @route 'helper-test'
+  @route 'index', path: '/'
 
 Router.reopen
   location: 'hash'

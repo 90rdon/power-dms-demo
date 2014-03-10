@@ -1,0 +1,4 @@
+#content-container.topcoat-list
+  ul#product-list.topcoat-list__container
+    each product in products
+      product-item item=product action='addItemToCart'

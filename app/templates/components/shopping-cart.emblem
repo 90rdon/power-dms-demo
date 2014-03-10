@@ -1,0 +1,10 @@
+.cart-container.right
+  .power-flex-2
+    a#off-screen-nav-button.topcoat-icon-button-quiet.off-screen-nav-button data-effeckt='effeckt-off-screen-nav-right-squeeze'
+      span.cart-icon.icomatic cart
+  .power-flex-half.left.total-container
+    h4.total-row.row-top Your cart
+    .total-row.row-bottom
+      =cart.count
+      |  items totaling $
+      =toFixed cart.total 2

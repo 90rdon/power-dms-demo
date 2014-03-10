@@ -35,4 +35,11 @@ indexController = Ember.ArrayController.extend
     @set('currentContent', result)
   ).property('filteredContent')
 
+  actions:
+    addItemToCart: (item) ->
+      @get('controllers.cart').send('addItemToCart', item)
+
+    removeItemFromCart: (item) ->
+      @removeObject(item)
+
 `export default indexController`

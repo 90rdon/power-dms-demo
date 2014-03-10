@@ -6,12 +6,8 @@
       view Em.TextField class='topcoat-search-input' type='search' valueBinding='controllers.index.search' placeholder='search'
 
   .topcoat-navigation-bar__item.right.half
-      span
-        a#off-screen-nav-button.topcoat-icon-button-quiet.off-screen-nav-button data-effeckt='effeckt-off-screen-nav-right-squeeze'
-          span.cart-icon.icomatic cart
-        span
-          div.top asd
-          div.bottom asdfasdf
+    shopping-cart cart=controllers.cart
 
-
+offscreen-nav cart=controllers.cart
+          
 outlet

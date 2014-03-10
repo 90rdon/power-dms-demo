@@ -1,0 +1,30 @@
+li.item-container.topcoat-list__item
+  .item-content
+    .image-container
+
+      a{action 'addItemToCart' item} href='#'
+        figure.effeckt-caption.effeckt-caption-10
+          img src=item.fullImageUri alt=item.title
+          
+          figcaption
+            .effeckt-figcaption-wrap
+              img src=item.fullImageUri alt=item.title style='display:none;'
+              h3
+                =item.title
+              | Add to Cart
+
+    .detail-content
+      .top-container
+        .half
+          =item.title
+        .half.right
+          | $ {{toFixed item.price 2}}
+
+
+      .bottom-container.left
+        p
+          item.author
+        p
+          capitalizeFirst item.type
+        p.descrption-cell
+          item.description
