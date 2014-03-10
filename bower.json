@@ -1,23 +1,23 @@
 {
   "name": "power-dms",
   "dependencies": {
-    "handlebars": "~1.1.2",
-    "jquery": "~1.9.1",
-    "qunit": "~1.12.0",
-    "ember": "~1.4.0-beta.2",
-    "ember-data": "~1.0.0-beta.6",
+    "handlebars": "1.1.2",
+    "jquery": "1.9.1",
+    "qunit": "1.12.0",
+    "ember": "1.4.0-beta.2",
+    "ember-data": "1.0.0-beta.6",
     "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#master",
-    "ic-ajax": "~0.3.0",
-    "ember-testing-httpRespond": "~0.1.1",
-    "emblem.js": "~0.3.11",
-    "topcoat": "~0.8.0",
+    "ic-ajax": "0.3.0",
+    "ember-testing-httpRespond": "0.1.1",
+    "emblem.js": "0.3.11",
+    "topcoat": "0.8.0",
     "topcoat-effeckt": "git://github.com/topcoat/topcoat-effeckt.git#gh-pages",
     "topcoat-grid": "git://github.com/topcoat/grid.git#master",
     "icomatic": "git://github.com/icomatic/sample-set.git#master",
-    "swag": "~0.6.1",
-    "modernizr": "~2.7.2"
+    "swag": "0.6.1",
+    "modernizr": "2.7.2"
   },
   "resolutions": {
-    "ember": "~1.4.0-beta.2"
+    "ember": "1.4.0-beta.2"
   }
 }
