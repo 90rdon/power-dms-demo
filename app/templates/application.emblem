@@ -7,7 +7,5 @@
 
   .topcoat-navigation-bar__item.right.half
     shopping-cart cart=controllers.cart
-
-offscreen-nav cart=controllers.cart
           
 outlet

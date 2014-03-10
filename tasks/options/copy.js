@@ -17,11 +17,19 @@ module.exports = {
     }]
   },
 
-  cssToResult: {
-    expand: true,
-    cwd: 'app/styles',
-    src: ['**/*.css', '!**/*.styl'],
-    dest: 'tmp/result/assets'
+  stylesToTmp: {
+    files: [{
+      expand: true,
+      cwd: 'app/styles',
+      src: ['**/*.css', '!**/*.styl'],
+      dest: 'tmp/result/assets'
+    },
+    {
+      expand: true,
+      cwd: 'vendor/icomatic/kit',
+      src: ['*.{eot,svg,ttf,woff}'],
+      dest: 'tmp/result/assets'
+    }]
   },
 
   // Assembles everything in `tmp/result`.

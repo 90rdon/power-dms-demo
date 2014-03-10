@@ -189,7 +189,7 @@ module.exports = (grunt) ->
     'sass:compile'
     'less:compile'
     'stylus:compile'
-    'copy:cssToResult'
+    'copy:stylesToTmp'
     'autoprefixer:app'
   ])
   

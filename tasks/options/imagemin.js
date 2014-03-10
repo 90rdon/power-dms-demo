@@ -6,7 +6,10 @@ module.exports = {
     files: [{
       expand: true,
       cwd: 'tmp/result',
-      src: '**/*.{png,gif,jpg,jpeg}',
+      src: [
+        '**/*.{png,gif,jpg,jpeg}',
+        '**/*.{eot,svg,ttf,woff}'
+      ],
       dest: 'dist/'
     }]
   }

@@ -1,2 +1,3 @@
 #page-wrap.page-wrap
+  offscreen-nav cart=controllers.cart
   product-list products=controller.currentContent action='addItemToCart'
