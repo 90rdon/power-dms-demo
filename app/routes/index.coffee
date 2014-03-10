@@ -9,7 +9,7 @@ indexRoute = Ember.Route.extend
     #   success: (response) ->
     #     console.log 'response = ' + response
 
-  setupControllers: (controller, model) ->
+  setupController: (controller, model) ->
     controller.set 'model', model
   
   actions:

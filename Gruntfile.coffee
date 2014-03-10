@@ -74,8 +74,6 @@ module.exports = (grunt) ->
     'clean:dist'
     'build:dist'
     'copy:assemble'
-    
-    # 'copy:fontsToResult',
     'createDistVersion'
   ]
   
@@ -165,11 +163,9 @@ module.exports = (grunt) ->
   # Templates
   grunt.registerTask 'buildTemplates:dist', filterAvailable([
     'emblem:compile'
-    'emberTemplates:dist'
   ])
   grunt.registerTask 'buildTemplates:debug', filterAvailable([
     'emblem:compile'
-    'emberTemplates:debug'
   ])
   
   # Scripts
