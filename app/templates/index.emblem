@@ -1,65 +1,55 @@
-#content-container.topcoat-list
-  ul#product-list.topcoat-list__container
-    each controller.currentContent
-      li.item-container.topcoat-list__item
-        / .item-content.topcoat-grid__row
-        /   .topcoat-grid__column--auto
+view 'effeckt-container'
+  view 'effeckt-off-screen-nav'
+    nav#effeckt-off-screen-nav.effeckt-off-screen-nav.topcoat-list__container style='display:block;'
+      h4.topcoat-list__header
+        | Navigation
+        a#effeckt-off-screen-nav-close.effeckt-off-screen-nav-close href='#' x
 
-        /     a{action 'addItemToCart' this} href='#'
-        /       figure.image-container.effeckt-caption.effeckt-caption-10
-        /         img src=fullImageUri alt=title
-                
-        /         figcaption
-        /           .effeckt-figcaption-wrap
-        /             img src=fullImageUri alt=title style='display:none;'
-        /             h3
-        /               =title
-        /             p Add to Cart
+      ul.topcoat-list
+        each controllers.cart
+          li.topcoat-list__item
+            .topcoat-grid__row
+              .topcoat-grid__column--auto.left
+                a href='#'
+                  =title
+              .topcoat-grid__column--auto.right
+                a.effeckt-off-screen-nav-remove{action 'removeItemFromCart' this} href='#' x
 
-        /   .detail-content.topcoat-grid__column--auto
-        /     .top-container.topcoat-grid__row
-        /       .topcoat-grid__column--auto
-        /         =title
-        /       .topcoat-grid__column--auto
-        /         | $ {{toFixed price 2}}
 
-        /     .bottom-container.topcoat-grid__row
-        /       .topcoat-grid__column--auto
-        /         .topcoat-grid__row
-        /           .topcoat-grid__column--auto
-        /             author
-        /         .topcoat-grid__row
-        /           .topcoat-grid__column--auto
-        /             type
-        /         .topcoat-grid__row
-        /           .topcoat-grid__column--auto
-        /             p.descrption-cell
-        /               description
-        .item-content
-          .image-container.left
+    .off-screen-nav-cover
 
-            a{action 'addItemToCart' this} href='#'
-              figure.effeckt-caption.effeckt-caption-10
-                img src=fullImageUri alt=title
-                
-                figcaption
-                  .effeckt-figcaption-wrap
-                    img src=fullImageUri alt=title style='display:none;'
-                    h3
+    #page-wrap.page-wrap
+
+      #content-container.topcoat-list
+        ul#product-list.topcoat-list__container
+          each controller.currentContent
+            li.item-container.topcoat-list__item
+              .item-content
+                .image-container
+
+                  a{action 'addItemToCart' this} href='#'
+                    figure.effeckt-caption.effeckt-caption-10
+                      img src=fullImageUri alt=title
+                      
+                      figcaption
+                        .effeckt-figcaption-wrap
+                          img src=fullImageUri alt=title style='display:none;'
+                          h3
+                            =title
+                          | Add to Cart
+
+                .detail-content
+                  .top-container
+                    .half
                       =title
-                    p Add to Cart
+                    .half.right
+                      | $ {{toFixed price 2}}
 
-          .detail-content.right
-            .top-container
-              span
-                =title
-              span
-                | $ {{toFixed price 2}}
 
-            .bottom-container.left
-              div
-                author
-              div
-                capitalizeFirst type
-              .descrption-cell
-                description
+                  .bottom-container.left
+                    p
+                      author
+                    p
+                      capitalizeFirst type
+                    p.descrption-cell
+                      description

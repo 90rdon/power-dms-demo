@@ -18,17 +18,18 @@
   <!-- endbuild -->
 
   <!-- build:css(tmp/result) assets/vendor.min.css -->
+  
+    <!-- @if dist=false -->
+    <link rel='stylesheet' href='/vendor/topcoat-grid/css/grid.css'>
+    <link rel='stylesheet' href='/vendor/topcoat/css/topcoat-mobile-light.css'>
+    <!-- @endif --><!-- @if dist=true -->
+    <link rel='stylesheet' href='/vendor/topcoat-grid/css/grid.min.css'>
+    <link rel='stylesheet' href='/vendor/topcoat/css/topcoat-mobile-light.min.css'>
+    <!-- @endif -->
+    
     <link rel='stylesheet' href='/vendor/topcoat-effeckt/css/effeckt.autoprefixed.css'>
     <link rel='stylesheet' href='/vendor/icomatic/kit/icomatic.css' />
     
-    <!-- @if dist=false -->
-    <link rel='stylesheet' href='/vendor/topcoat/css/topcoat-mobile-light.css'>
-    <link rel='stylesheet' href='/vendor/topcoat-grid/css/grid.css'>
-    <!-- @endif --><!-- @if dist=true -->
-    <link rel='stylesheet' href='/vendor/topcoat/css/topcoat-mobile-light.min.css'>
-    <link rel='stylesheet' href='/vendor/topcoat-grid/css/grid.min.css'>
-    <!-- @endif -->
-
   <!-- endbuild -->
 
   <!-- for more details visit: https://github.com/yeoman/grunt-usemin -->

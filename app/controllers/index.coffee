@@ -1,4 +1,8 @@
 indexController = Ember.ArrayController.extend
+  needs: [
+    'cart'
+  ]
+  
   search:         null
   currentContent: null
 
