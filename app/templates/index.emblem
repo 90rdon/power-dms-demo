@@ -1,3 +1,21 @@
-#page-wrap.page-wrap
-  offscreen-nav cart=controllers.cart
-  product-list products=controller.currentContent action='addItemToCart'
+view 'effeckt-container'
+  view 'effeckt-off-screen-nav'
+    nav#effeckt-off-screen-nav.effeckt-off-screen-nav.topcoat-list__container style='display:block;'
+      h4.topcoat-list__header
+        | Navigation
+        a#effeckt-off-screen-nav-close.effeckt-off-screen-nav-close href='#' x
+
+      ul.topcoat-list
+        each controllers.cart
+          li.topcoat-list__item
+            .topcoat-grid__row
+              .topcoat-grid__column--auto.left
+                a href='#'
+                  =title
+              .topcoat-grid__column--auto.right
+                a.effeckt-off-screen-nav-remove{action 'removeItemFromCart' this} href='#' x
+
+    .off-screen-nav-cover
+
+    #page-wrap.page-wrap
+      product-list products=controller.currentContent action='addItemToCart'

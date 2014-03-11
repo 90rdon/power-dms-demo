@@ -40,6 +40,6 @@ indexController = Ember.ArrayController.extend
       @get('controllers.cart').send('addItemToCart', item)
 
     removeItemFromCart: (item) ->
-      @removeObject(item)
+      @get('controllers.cart').send('removeItemFromCart', item)
 
 `export default indexController`
