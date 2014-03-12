@@ -4,6 +4,8 @@ indexRoute = Ember.Route.extend
     
   setupController: (controller, model) ->
     controller.set 'model', model
+    result =  ic.ajax('/api/products')
+    console.log result
   
   actions:
     addItemToCart: (item) ->

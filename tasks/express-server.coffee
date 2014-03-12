@@ -91,10 +91,9 @@ module.exports = (grunt) ->
 
     app = express()
     done = @async()
-    proxyMethod = proxyMethodToUse or grunt.config('express-server.options.APIMethod')
+    proxyMethod = grunt.config('express-server.options.APIMethod')
     app.use lock
     app.use express.compress()
-
 
     if proxyMethod is 'stub'
       grunt.log.writeln 'Using API Stub'
@@ -105,13 +104,9 @@ module.exports = (grunt) ->
       proxyURL = grunt.config('express-server.options.proxyURL')
       proxyPath = grunt.config('express-server.options.proxyPath') or '/api'
       grunt.log.writeln 'Proxying API requests matching ' + proxyPath + '/* to: ' + proxyURL
+      
       app.namespace '/api', ->
         app.get '/products', (req, res) ->
-          options =
-            host: 'http://homework.powerdms.com'
-            path: '/products'
-            method: 'GET'
-
           request 'http://homework.powerdms.com/products', (err, response, body) ->
             jsonBody = JSON.parse(body)
             i = 1
