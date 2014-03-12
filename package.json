@@ -2,7 +2,7 @@
   "name": "power-dms-demo",
   "namespace": "appkit",
   "APIMethod": "proxy",
-  "proxyURL": "http://homework.powerdms.com",
+  "proxyURL": "http://0.0.0.0:3333",
   "version": "0.0.0",
   "private": true,
   "directories": {

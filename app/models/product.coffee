@@ -12,7 +12,7 @@ product = DS.Model.extend
 
   fullImageUri: (->
     uri = @get('imageUri')
-    'http://homework.powerdms.com/' + uri 
+    'http://homework.powerdms.com' + uri 
   ).property('imageUri')
 
 product.reopenClass

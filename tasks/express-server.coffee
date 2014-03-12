@@ -105,6 +105,21 @@ module.exports = (grunt) ->
       proxyURL = grunt.config('express-server.options.proxyURL')
       proxyPath = grunt.config('express-server.options.proxyPath') or '/api'
       grunt.log.writeln 'Proxying API requests matching ' + proxyPath + '/* to: ' + proxyURL
+      app.namespace '/api', ->
+        app.get '/products', (req, res) ->
+          options =
+            host: 'http://homework.powerdms.com'
+            path: '/products'
+            method: 'GET'
+
+          request 'http://homework.powerdms.com/products', (err, response, body) ->
+            jsonBody = JSON.parse(body)
+            i = 1
+            jsonBody.forEach (object) ->
+              object.id = i
+              i++
+            res.send('{"products":' + JSON.stringify(jsonBody) + '}')
+
       app.all proxyPath + '/*', passThrough(proxyURL)
 
     if target is 'debug'

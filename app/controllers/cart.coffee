@@ -12,7 +12,14 @@ cartController = Ember.ArrayController.extend
 
   actions:
     addItemToCart: (item) ->
-      @pushObject(item)
+      @pushObject Ember.Object.create
+        id: ++Ember.uuid
+        type: item.get('type')
+        title: item.get('title')
+        description: item.get('description')
+        author: item.get('author')
+        fullImageUri: item.get('fullImageUri')
+        price: item.get('price')
 
     removeItemFromCart: (item) ->
       @removeObject(item)

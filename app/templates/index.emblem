@@ -1,19 +1,29 @@
 view 'effeckt-container'
   view 'effeckt-off-screen-nav'
     nav#effeckt-off-screen-nav.effeckt-off-screen-nav.topcoat-list__container style='display:block;'
-      h4.topcoat-list__header
-        | Navigation
-        a#effeckt-off-screen-nav-close.effeckt-off-screen-nav-close href='#' x
+      
+      .offscreen-nav-container
+        h4.topcoat-list__header.nav-header
+          nav-cart cart=controllers.cart
+          a#effeckt-off-screen-nav-close.effeckt-off-screen-nav-close.power-font-xx-large href='#' x
 
-      ul.topcoat-list
-        each controllers.cart
-          li.topcoat-list__item
-            .topcoat-grid__row
-              .topcoat-grid__column--auto.left
-                a href='#'
+        ul.topcoat-list.offscreen-nav-list
+          each controllers.cart
+            li.topcoat-list__item
+              .topcoat-grid__row
+                .topcoat-grid__column--auto.left
+                  img src=fullImageUri alt=title
+                .topcoat-grid__column--auto
                   =title
-              .topcoat-grid__column--auto.right
+                .topcoat-grid__column--auto
+                  | ${{toFixed price 2}}
                 a.effeckt-off-screen-nav-remove{action 'removeItemFromCart' this} href='#' x
+
+        .topcoat-list__header.bottom-total
+          .power-flex-half.left
+            h4 Total
+          .power-flex-half.right
+            h4 ${{toFixed controllers.cart.total 2}}
 
     .off-screen-nav-cover
 

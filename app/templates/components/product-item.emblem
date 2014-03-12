@@ -15,7 +15,7 @@ li.item-container.topcoat-list__item
 
     .detail-content
       .top-container
-        .half
+        .half.power-font-large
           =item.title
         .half.right
           | $ {{toFixed item.price 2}}
@@ -24,7 +24,7 @@ li.item-container.topcoat-list__item
       .bottom-container.left
         p
           item.author
-        p
+        p style='color:#C6C8C8;'
           capitalizeFirst item.type
         p.descrption-cell
           item.description

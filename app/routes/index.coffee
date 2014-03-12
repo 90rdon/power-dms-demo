@@ -1,14 +1,7 @@
 indexRoute = Ember.Route.extend
   model: ->
     @store.find('product')
-    # ic.ajax 'http://homework.powerdms.com/products'
-    # $.ajax
-    #   type: 'GET'
-    #   url: 'http://homework.powerdms.com/products'
-    #   datatype: 'jsonp'
-    #   success: (response) ->
-    #     console.log 'response = ' + response
-
+    
   setupController: (controller, model) ->
     controller.set 'model', model
   
