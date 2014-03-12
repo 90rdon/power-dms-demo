@@ -22,7 +22,6 @@ taskRequirements =
   fancySprites: ['grunt-fancy-sprites']
   autoprefixer: ['grunt-autoprefixer']
   rev: ['grunt-rev']
-  # connect-proxy: ['grunt-connect-proxy']
 
 
 # Task fallbacks

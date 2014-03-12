@@ -35,10 +35,6 @@ selfView = Ember.View.extend
       self.nav.removeClass 'effeckt-off-screen-nav-show'
       setTimeout (->
         self.nav.removeClass self.closeButton.data('effeckt')
-        
-        # WEIRD BUG
-        # Have to trigger redraw or it sometimes leaves
-        # behind a black box (Chrome 27.0.1453.116)
         self.nav.hide()
         blah = self.nav.width()
         self.nav.show()

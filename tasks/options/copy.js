@@ -29,6 +29,12 @@ module.exports = {
       cwd: 'vendor/icomatic/kit',
       src: ['*.{eot,svg,ttf,woff}'],
       dest: 'tmp/result/assets'
+    },
+    {
+      expand: true,
+      cwd: 'vendor/topcoat',
+      src: ['**/*.{eot,svg,ttf,woff,otf}', '!demo/**/*'],
+      dest: 'tmp/result'
     }]
   },
 
