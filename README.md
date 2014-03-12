@@ -11,3 +11,4 @@ This is web project build for Power DMS as a demo.
 
 4. `npm install`
 5. `grunt server` 
+6. Check out the web site on `http://0.0.0.0:3333`
