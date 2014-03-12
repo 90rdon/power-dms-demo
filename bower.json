@@ -19,6 +19,7 @@
     "fastclick": "~1.0.0"
   },
   "resolutions": {
-    "ember": "~1.4.0"
+    "ember": "~1.4.0",
+    "handlebars": "~1.1.2"
   }
 }

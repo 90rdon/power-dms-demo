@@ -133,18 +133,15 @@
       
         App = require('appkit/app')['default'].create();
         window.addEventListener('load', function() {
-            new FastClick(document.body);
+          new FastClick(document.body);
         }, false);
-        // App.phoneGapApp.initialize();
-        // if (window.device) {
-        //     // A mobile device is being used
-        //     console.log('Device in use');
-        // } else {
-        //     //If a mobile device is not being used then lets kick off the app
-        //     console.log('Device ready');
-        //     App.phoneGapApp.onDeviceReady();
-        //     console.log('Device readied');
-        // }
+        App.phoneGapApp.initialize();
+        if (window.device) {
+          // A mobile device is being used
+        } else {
+          //If a mobile device is not being used then lets kick off the app
+          App.phoneGapApp.onDeviceReady();
+        }
       })
   </script>
   <!-- @endif -->

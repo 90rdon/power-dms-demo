@@ -75,6 +75,7 @@ module.exports = (grunt) ->
     'build:dist'
     'copy:assemble'
     'createDistVersion'
+    # 'copy:cordova'
   ]
   
   # Default Task
