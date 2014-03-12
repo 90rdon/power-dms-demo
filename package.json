@@ -2,8 +2,8 @@
   "name": "power-dms-demo",
   "namespace": "appkit",
   "APIMethod": "proxy",
-  "proxyURL": "http://0.0.0.0:3333",
-  "version": "0.0.0",
+  "proxyURL": "http://power-dms-demo.herokuapp.com",
+  "version": "1.0.0",
   "private": true,
   "directories": {
     "doc": "doc",
